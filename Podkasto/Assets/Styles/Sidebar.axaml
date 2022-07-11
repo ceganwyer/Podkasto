@@ -1,0 +1,91 @@
+<Styles xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:i="clr-namespace:Projektanker.Icons.Avalonia;assembly=Projektanker.Icons.Avalonia">
+    <Design.PreviewWith>
+        <Border Padding="20">
+            <!-- Add Controls for Previewer Here -->
+        </Border>
+    </Design.PreviewWith>
+
+    <!-- Sidebar styles -->
+    <Style Selector="TabControl.sidebar">
+        <Setter Property="TabStripPlacement" Value="Left"/>
+        <Setter Property="Template">
+            <ControlTemplate>
+                <Grid Background="{StaticResource ThemeBackgroundColor}">
+                    <Grid ColumnDefinitions="Auto,Auto,*"
+                          RowDefinitions="*">
+
+                        <!-- The container for the tab items -->
+                        <ItemsPresenter Name="PART_ItemsPresenter"
+                                        ItemTemplate="{TemplateBinding ItemTemplate}"
+                                        Items="{TemplateBinding Items}"
+                                        ItemsPanel="{TemplateBinding ItemsPanel}"/>
+
+                        <!-- The divider -->
+                        <Rectangle Grid.Column="1"
+                                   Width="1"
+                                   VerticalAlignment="Stretch"
+                                   Fill="{StaticResource ThemeBorderLowColor}" />
+
+                        <!-- The selected content -->
+                        <ContentPresenter Name="PART_SelectedContentHost"
+                                          Grid.Row="0"
+                                          Grid.Column="2"
+                                          Background="{StaticResource ThemeBackgroundColor}"
+                                          HorizontalContentAlignment="Stretch"
+                                          VerticalContentAlignment="Stretch"
+                                          Content="{TemplateBinding SelectedContent}"
+                                          ContentTemplate="{TemplateBinding SelectedContentTemplate}" />
+                    </Grid>
+                </Grid>
+            </ControlTemplate>
+        </Setter>
+    </Style>
+    
+    <!-- Sidebar TabItem styles -->
+    <Style Selector="TabControl.sidebar > TabItem">
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Padding" Value="0 0 10 0" />
+        <Setter Property="FontSize" Value="20" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+    </Style>
+    
+    <!-- Sidebar Icon Styles -->
+    <Style Selector="i|Icon.sidebar-icon">
+        <Setter Property="Margin" Value="5 0 10 0" />
+    </Style>
+    
+    <!-- Hide Sidebar selected item pipe -->
+    <Style Selector="TabControl.sidebar > TabItem:selected /template/ Border#PART_SelectedPipe">
+        <Setter Property="IsVisible"
+                Value="False" />
+    </Style>
+    
+    <!-- Set styles for moused over item-->
+    <Style Selector="TabControl.sidebar > TabItem:pointerover /template/ Border#PART_LayoutRoot">
+        <Setter Property="Background"
+                Value="{StaticResource ThemeAccentColor2}" />
+    </Style>
+    
+    <!-- Styles for Tab Content Presenter -->
+    <Style Selector="TabControl.sidebar > TabItem /template/ ContentPresenter#PART_ContentPresenter">
+        <Setter Property="Margin"
+                Value="5" />
+    </Style>
+    
+    <!-- Set styles for selected item -->
+    <Style Selector="TabControl.sidebar > TabItem:selected">
+        <Setter Property="Opacity"
+                Value="1" />
+        <Setter Property="BorderBrush"
+                Value="{StaticResource ThemeAccentColor}" />
+    </Style>
+    
+    <!-- Set styles for selected item border -->
+    <Style Selector="TabControl.sidebar > TabItem:selected /template/ Border#PART_LayoutRoot">
+        <Setter Property="Background"
+                Value="{StaticResource ThemeControlHighColor}" />
+    </Style>
+</Styles>

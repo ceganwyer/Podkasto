@@ -1,0 +1,129 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:Podkasto.ViewModels"
+             xmlns:c="using:Podkasto.Controls"
+             xmlns:i="clr-namespace:Projektanker.Icons.Avalonia;assembly=Projektanker.Icons.Avalonia"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             x:Class="Podkasto.Views.MainView">
+    <Design.DataContext>
+        <vm:MainViewModel />
+    </Design.DataContext>
+    
+    <DockPanel>
+        <!-- Media Control Bar -->
+        <c:MediaControlBar DockPanel.Dock="Bottom" />
+
+        <!-- Sidebar Menu -->
+        <TabControl x:Name="Sidebar"
+                    Classes="sidebar"
+                    DockPanel.Dock="Left">
+                        
+            <!-- Now Playing Tab -->
+            <TabItem Content="{Binding NowPlayingView}">
+                <TabItem.Header>
+                    <DockPanel>
+                        <i:Icon Value="fa-solid fa-play"
+                                Classes="sidebar-icon"
+                                DockPanel.Dock="Left"/>
+                        <TextBlock Text="Now Playing" 
+                                   DockPanel.Dock="Right"/>
+                    </DockPanel>
+                </TabItem.Header>
+            </TabItem>
+                        
+            <!-- Queue Tab -->
+            <TabItem Content="{Binding QueueView}">
+                <TabItem.Header>
+                    <DockPanel>
+                        <i:Icon Value="fa-solid fa-list"
+                                Classes="sidebar-icon"
+                                DockPanel.Dock="Left"/>
+                        <TextBlock Text="Queue" 
+                                   DockPanel.Dock="Right"/>
+                    </DockPanel>
+                </TabItem.Header>
+            </TabItem>
+            
+            <!-- Subscriptions Tab -->
+            <TabItem Content="{Binding SubscriptionsView}">
+                <TabItem.Header>
+                    <DockPanel>
+                        <i:Icon Value="fa-solid fa-podcast"
+                                Classes="sidebar-icon"
+                                DockPanel.Dock="Left"/>
+                        <TextBlock Text="Subscriptions" 
+                                   DockPanel.Dock="Right"/>
+                    </DockPanel>
+                </TabItem.Header>
+            </TabItem>
+            
+            <!-- Add Podcast Tab -->
+            <TabItem Content="{Binding AddPodcastView}">
+                <TabItem.Header>
+                    <DockPanel>
+                        <i:Icon Value="fa-solid fa-plus"
+                                Classes="sidebar-icon"
+                                DockPanel.Dock="Left"/>
+                        <TextBlock Text="Add Podcast" 
+                                   DockPanel.Dock="Right"/>
+                    </DockPanel>
+                </TabItem.Header>
+            </TabItem>
+            
+            <!-- Episodes Tab -->
+            <TabItem Content="{Binding EpisodesView}">
+                <TabItem.Header>
+                    <DockPanel>
+                        <i:Icon Value="fa-solid fa-folder"
+                                Classes="sidebar-icon"
+                                DockPanel.Dock="Left"/>
+                        <TextBlock Text="Episodes" 
+                                   DockPanel.Dock="Right"/>
+                    </DockPanel>
+                </TabItem.Header>
+            </TabItem>
+            
+            <!-- Downloads Tab -->
+            <TabItem Content="{Binding DownloadsView}">
+                <TabItem.Header>
+                    <DockPanel>
+                        <i:Icon Value="fa-solid fa-download"
+                                Classes="sidebar-icon"
+                                DockPanel.Dock="Left"/>
+                        <TextBlock Text="Downloads" 
+                                   DockPanel.Dock="Right"/>
+                    </DockPanel>
+                </TabItem.Header>
+            </TabItem>
+            
+            <!-- History Tab -->
+            <TabItem Content="{Binding HistoryView}">
+                <TabItem.Header>
+                    <DockPanel>
+                        <i:Icon Value="fa-solid fa-clock-rotate-left"
+                                Classes="sidebar-icon"
+                                DockPanel.Dock="Left"/>
+                        <TextBlock Text="History" 
+                                   DockPanel.Dock="Right"/>
+                    </DockPanel>
+                </TabItem.Header>
+            </TabItem>
+            
+            <!-- Settings Tab -->
+            <TabItem Content="{Binding SettingsView}">
+                <TabItem.Header>
+                    <DockPanel>
+                        <i:Icon Value="fa-solid fa-gear"
+                                Classes="sidebar-icon"
+                                DockPanel.Dock="Left"/>
+                        <TextBlock Text="Settings" 
+                                   DockPanel.Dock="Right"/>
+                    </DockPanel>
+                </TabItem.Header>
+            </TabItem>
+        </TabControl>
+        
+    </DockPanel>
+</UserControl>

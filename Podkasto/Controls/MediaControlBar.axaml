@@ -1,0 +1,23 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="using:Podkasto.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="1000" d:DesignHeight="100"
+             x:Class="Podkasto.Controls.MediaControlBar">
+    <Design.DataContext>
+        <vm:NowPlayingViewModel />
+    </Design.DataContext>
+    <DockPanel Classes="media-control">
+        <Rectangle 
+            DockPanel.Dock="Top"
+            Height="1"
+            HorizontalAlignment="Stretch"
+            Fill="{StaticResource ThemeBorderLowColor}"/>
+        <DockPanel DockPanel.Dock="Bottom">
+            <ProgressBar DockPanel.Dock="Top"
+                         Minimum="0" Maximum="100" Value="50"
+                         Width="100"/>
+        </DockPanel>
+    </DockPanel>
+</UserControl>

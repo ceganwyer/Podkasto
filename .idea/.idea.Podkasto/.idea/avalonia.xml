@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AvaloniaProject">
+    <option name="projectPerEditor">
+      <map>
+        <entry key="Podkasto/App.axaml" value="Podkasto/Podkasto.csproj" />
+        <entry key="Podkasto/Assets/Icons.axaml" value="Podkasto/Podkasto.csproj" />
+        <entry key="Podkasto/Assets/Styles/MediaControls.axaml" value="Podkasto/Podkasto.csproj" />
+        <entry key="Podkasto/Assets/Styles/PodkastoDark.axaml" value="Podkasto/Podkasto.csproj" />
+        <entry key="Podkasto/Assets/Styles/Sidebar.axaml" value="Podkasto/Podkasto.csproj" />
+        <entry key="Podkasto/Controls/MediaControlBar.axaml" value="Podkasto/Podkasto.csproj" />
+        <entry key="Podkasto/Views/AddPodcastView.axaml" value="Podkasto/Podkasto.csproj" />
+        <entry key="Podkasto/Views/DownloadsView.axaml" value="Podkasto/Podkasto.csproj" />
+        <entry key="Podkasto/Views/EpisodesView.axaml" value="Podkasto/Podkasto.csproj" />
+        <entry key="Podkasto/Views/HistoryView.axaml" value="Podkasto/Podkasto.csproj" />
+        <entry key="Podkasto/Views/MainView.axaml" value="Podkasto/Podkasto.csproj" />
+        <entry key="Podkasto/Views/MainWindow.axaml" value="Podkasto/Podkasto.csproj" />
+        <entry key="Podkasto/Views/NowPlayingView.axaml" value="Podkasto/Podkasto.csproj" />
+        <entry key="Podkasto/Views/QueueView.axaml" value="Podkasto/Podkasto.csproj" />
+        <entry key="Podkasto/Views/SettingsView.axaml" value="Podkasto/Podkasto.csproj" />
+        <entry key="Podkasto/Views/SubscriptionsView.axaml" value="Podkasto/Podkasto.csproj" />
+      </map>
+    </option>
+  </component>
+</project>
